@@ -1,5 +1,9 @@
 [
   {
+    "url": "https://github.com/shanerobinson/linkist",
+    "text": "Linkist : Control your links"
+  },
+  {
     "url": "https://blacklivesmatter.com/",
     "text": "Black Lives Matter"
   },
@@ -12,10 +16,6 @@
     "text": "Delete Facebook like I did in 2017"
   },
   {
-    "url": "https://github.com/shanerobinson/linkist",
-    "text": "Linkist : Control your links"
-  },
-  {
     "url": "https://11ty.dev",
     "text": "11ty : A simpler static site generator"
   },
@@ -25,7 +25,7 @@
   },
   {
     "url": "https://www.netlify.com/",
-    "text": "Netlifgy : The fastest way to build the fastest sites"
+    "text": "Netlify : The fastest way to build the fastest sites"
   },
   {
     "url": "https://forestry.io/",
