@@ -1,0 +1,13 @@
+<!-- Hero Image -->
+{% if settings.heroImage %}
+  <img class="object-cover h-32 w-full sm:h-48 sm:rounded-full" src="{{ settings.heroImage }}" alt="{{ settings.logoTitle }}"/>
+{% endif %}
+
+<!-- Hero Caption -->
+{% if settings.heroCaption %}
+  <header class="pt-4 {{ settings.colors.heroCaption | default('text-gray-600',true) }} mx-auto w-full text-center">
+    <div class="text-lg font-light">
+      {{ settings.heroCaption }}
+    </div>
+  </header>
+{% endif %}

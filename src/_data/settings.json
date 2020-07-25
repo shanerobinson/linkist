@@ -1,0 +1,37 @@
+{
+  "metaTitle": "Your Meta Title",
+  "metaDescription": "Your meta description.",
+  "logoTitle": "Your Name",
+  "heroImage": "/assets/images/philipe-cavalcante-xe68QiMaDrQ-unsplash-800x300.jpg",
+  "heroCaption": "Your short description of who you are",
+  "social": {
+    "dribbble": "",
+    "facebook": "",
+    "github": "https://github.com/",
+    "instagram": "https://instagram.com/",
+    "linkedin": "http://www.linkedin.com/",
+    "pinterest": "https://pinterest.com/",
+    "twitter": "https://twitter.com/",
+    "youtube": "",
+    "email": "you@your-email.com"
+  },
+  "stats": {
+    "google": "",
+    "fathom": ""
+  },
+  "colors": {
+    "background": "",
+    "bodyText": "",
+    "navBar": "",
+    "navText": "",
+    "navTextHover": "",
+    "navTextBackgroundHover": "",
+    "heroCaption": "",
+    "btnBackground": "",
+    "btnBorder": "",
+    "btnHover": "",
+    "btnLink": "",
+    "svgColor": "",
+    "svgHover": ""
+  }
+}

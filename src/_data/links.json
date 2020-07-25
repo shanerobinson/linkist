@@ -1,0 +1,34 @@
+[
+  {
+    "url": "https://blacklivesmatter.com/",
+    "text": "Black Lives Matter"
+  },
+  {
+    "url": "https://eji.org/",
+    "text": "The Equal Justice Initiative"
+  },
+  {
+    "url": "https://deletefacebook.com/",
+    "text": "Delete Facebook like I did in 2017"
+  },
+  {
+    "url": "https://github.com/shanerobinson/linkist",
+    "text": "Linkist : Control your links"
+  },
+  {
+    "url": "https://11ty.dev",
+    "text": "11ty : A simpler static site generator"
+  },
+  {
+    "url": "https://tailwindcss.com/",
+    "text": "Tailwind CSS : A utility-first CSS framework"
+  },
+  {
+    "url": "https://www.netlify.com/",
+    "text": "Netlifgy : The fastest way to build the fastest sites"
+  },
+  {
+    "url": "https://forestry.io/",
+    "text": "Forestry : A static CMS that commits"
+  }
+]

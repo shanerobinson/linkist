@@ -1,0 +1,105 @@
+{% set navPages = collections.all | eleventyNavigation | reverse %}
+<nav x-data="{ open: false }" class="{{ settings.colors.navBar | default('bg-gray-800',true) }} mb-8 mt-0 fixed w-full z-10 top-0 sm:static">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- LOGO and BIG Menu-->
+      <div
+            class="flex-1 flex items-center justify-start sm:items-stretch sm:justify-start"
+          >
+        <!-- LOGO -->
+        <div class="block {{ settings.colors.navText | default('text-gray-300',true) }} font-semibold text-2xl pl-2">
+          <a href="/">{{ settings.logoTitle }}</a>
+        </div>
+        <!-- BIG Menu -->
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex">
+            <!-- 11ty Nav Plugin loop  -->
+            {% for entry in navPages | reverse %}
+              <a href="{{ entry.url | url }}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:{{ settings.colors.navTextHover | default('text-white',true) }} hover:{{ settings.colors.navTextBackgroundHover | default('bg-gray-700',true) }} focus:outline-none focus:{{ settings.colors.navTextHover | default('text-white',true) }} focus:{{ settings.colors.navTextBackgroundHover | default('bg-gray-700',true) }} transition duration-150 ease-in-out">
+                {{ entry.title }}
+              </a>
+            {% endfor %}
+            <!-- /Nav Plugin -->
+          </div>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div class="inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button
+              @click="open = !open"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:{{ settings.colors.navTextHover | default('text-white',true) }} hover:{{ settings.colors.navTextBackgroundHover | default('bg-gray-700',true) }} focus:outline-none focus:{{ settings.colors.navTextBackgroundHover | default('bg-gray-700',true) }} focus:{{ settings.colors.navTextHover | default('text-white',true) }} transition duration-150 ease-in-out"
+              x-bind:aria-label="open ? 'Close main menu' : 'Main menu'"
+              aria-label="Main menu"
+              x-bind:aria-expanded="open"
+            >
+          <!-- Icon when menu is closed. -->
+          <svg
+                x-state:on="Menu open"
+                x-state:off="Menu closed"
+                :class="{ 'hidden': open, 'block': !open }"
+                class="h-6 w-6 block"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+            <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+          </svg>
+          <!-- Icon when menu is open. -->
+          <svg
+                x-state:on="Menu open"
+                x-state:off="Menu closed"
+                :class="{ 'hidden': !open, 'block': open }"
+                class="h-6 w-6 hidden"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+            <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- small menu -->
+  <div
+        x-description="Mobile menu, toggle classes based on menu state."
+        x-state:on="Menu open"
+        x-state:off="Menu closed"
+        :class="{ 'block': open, 'hidden': !open }"
+        class="sm:hidden hidden"
+      >
+    <div class="px-2 pt-2 pb-3">
+      <!-- hardcode "Home" for mobile nav -->
+      <a
+            href="/"
+            class="mt-1 block px-3 py-2 rounded-md text-base font-medium {{ settings.colors.navText | default('text-gray-300',true) }} hover:{{ settings.colors.navTextHover | default('text-white',true) }} hover:{{ settings.colors.navTextBackgroundHover | default('bg-gray-700',true) }} focus:outline-none focus:{{ settings.colors.navTextHover | default('text-white',true) }} focus:{{ settings.colors.navTextBackgroundHover | default('bg-gray-700',true) }} transition duration-150 ease-in-out"
+          >
+          Home
+        </a>
+
+      <!-- 11ty Nav Plugin loop  -->
+      {% for entry in navPages | reverse %}
+        <a
+            href="{{ entry.url | url }}"
+            class="mt-1 block px-3 py-2 rounded-md text-base font-medium {{ settings.colors.navText | default('text-gray-300',true) }} hover:{{ settings.colors.navTextHover | default('text-white',true) }} hover:{{ settings.colors.navTextBackgroundHover | default('bg-gray-700',true) }} focus:outline-none focus:{{ settings.colors.navTextHover | default('text-white',true) }} focus:{{ settings.colors.navTextBackgroundHover | default('bg-gray-700',true) }} transition duration-150 ease-in-out"
+          >
+          {{ entry.title }}
+        </a>
+      {% endfor %}
+      <!-- /Nav Plugin -->
+    </div>
+  </div>
+</nav>

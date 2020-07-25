@@ -1,0 +1,12 @@
+---
+layout: base
+---
+<!-- LINKS -->
+<div class="mt-8 w-full px-4 mx-auto text-center">
+  {% for link in links %}
+    <a href="{{ link.url }}" class="block w-full {{ settings.colors.btnBorder | default('border-gray-300',true) }} border-2 mb-4 pt-4 pb-4 {{ settings.colors.btnLink | default('text-gray-300',true) }} {{ settings.colors.btnBackground | default('bg-gray-700',true) }} rounded-lg focus:outline-none sm:hover:{{ settings.colors.btnHover | default('bg-gray-600',true) }}">
+      {{ link.text }}
+    </a>
+  {% endfor %}
+</div>
+<!-- ==================================================== -->

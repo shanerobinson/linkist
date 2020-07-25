@@ -1,0 +1,52 @@
+{
+  "name": "linkist",
+  "version": "1.0.0",
+  "description": "Simple, highly configurable alternative to Linktr.ee and LinkIn.bio 11ty and TailwindCSS",
+  "main": "src/index.html",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev:eleventy": "eleventy --serve",
+    "dev:tail": "postcss src/assets/css/tailwind.css -o dist/assets/css/tailwind.css --watch",
+    "dev": "run-p dev:* --print-label",
+    "build:eleventy": "eleventy",
+    "build:tail": "env NODE_ENV=production postcss src/assets/css/tailwind.css -o dist/assets/css/tailwind.css",
+    "build": "run-s build:* --print-label",
+    "test:serve": "live-server dist",
+    "test": "run-s build:eleventy build:tail test:serve --print-label"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanerobinson/linkist.git"
+  },
+  "keywords": [
+    "alpinejs",
+    "11ty",
+    "eleventy",
+    "autoprefixer",
+    "npm-run-all",
+    "postcss-cli",
+    "tailwindcss"
+  ],
+  "author": "Shane Robinson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shanerobinson/linkist/issues"
+  },
+  "homepage": "https://github.com/shanerobinson/linkist#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "alpinejs": "^2.5.0",
+    "autoprefixer": "^9.8.5",
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^1.5.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-navigation": "^0.1.6"
+  }
+}

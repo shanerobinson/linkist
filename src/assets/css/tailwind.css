@@ -1,0 +1,21 @@
+@tailwind base;
+
+p {
+  @apply mb-4;
+}
+p a,
+blockquote a {
+  @apply underline font-bold italic;
+}
+
+blockquote {
+  @apply text-sm m-4;
+}
+
+td {
+  @apply px-8 py-1;
+}
+
+@tailwind components;
+
+@tailwind utilities;
