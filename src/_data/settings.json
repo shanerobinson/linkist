@@ -5,6 +5,7 @@
   "heroImage": "/assets/images/philipe-cavalcante-xe68QiMaDrQ-unsplash-800x300.jpg",
   "heroCaption": "Your short description of who you are",
   "social": {
+    "dev": "https://dev.to/",
     "dribbble": "",
     "facebook": "",
     "github": "https://github.com/",
