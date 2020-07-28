@@ -9,6 +9,8 @@ _(no webpack, parcel, gulp, etc.)_
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1be8bfac-2689-4733-ac69-6f292b1bda46/deploy-status)](https://app.netlify.com/sites/linkist/deploys)
 
+![Lighthouse Performance](lighthouse/lighthouse_performance.svg) ![Lighthouse Accessibility](lighthouse/lighthouse_accessibility.svg) ![Lighthouse Best Practices](lighthouse/lighthouse_best-practices.svg) ![Lighthouse SEO](lighthouse/lighthouse_seo.svg)
+
 ---
 
 ## Table of Contents
