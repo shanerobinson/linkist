@@ -1,7 +1,7 @@
-module.exports = function (eleventyConfig) {
-  const htmlmin = require("html-minifier");
-  const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const htmlmin = require("html-minifier");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
+module.exports = function (eleventyConfig) {
   // Layout aliases for convenience
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
   eleventyConfig.addLayoutAlias("page", "layouts/page.njk");
