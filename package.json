@@ -9,8 +9,8 @@
     "dev:tail": "postcss src/assets/css/tailwind.css -o dist/assets/css/tailwind.css --watch",
     "dev": "run-p dev:* --print-label",
     "build:eleventy": "eleventy",
-    "build:tail": "env NODE_ENV=production postcss src/assets/css/tailwind.css -o dist/assets/css/tailwind.css",
-    "build": "run-s build:* --print-label",
+    "build:tail": "postcss src/assets/css/tailwind.css -o dist/assets/css/tailwind.css",
+    "build": "NODE_ENV=production run-s build:* --print-label",
     "test:serve": "live-server dist",
     "test": "run-s build:eleventy build:tail test:serve --print-label"
   },
