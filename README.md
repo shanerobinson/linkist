@@ -1,5 +1,9 @@
 # Linkist
 
+### Updated to TailwindCSS v2.0.2
+
+---
+
 A simple, highly configurable alternative to [Linktr.ee](https://linktr.ee/) and [Linkin.bio](https://later.com/linkinbio/) using only [11ty](https://www.11ty.dev/) and [TailwindCSS](https://tailwindcss.com/).  
 _(no webpack, parcel, gulp, etc.)_
 
